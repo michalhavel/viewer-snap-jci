@@ -9,71 +9,53 @@ const THREE = window.THREE;
 
   'use strict';
 
-  var GizmoMaterial = function ( parameters ) {
-
-    THREE.MeshBasicMaterial.call( this );
-
-    this.depthTest = false;
-    this.depthWrite = false;
-    this.side = THREE.FrontSide;
-    this.transparent = true;
-
-    this.setValues( parameters );
-
-    this.oldColor = this.color.clone();
-    this.oldOpacity = this.opacity;
-
-    this.highlight = function( highlighted ) {
-
-      if ( highlighted ) {
-
-        this.color.setRGB( 1, 230/255, 3/255 );
-        this.opacity = 1;
-
-      } else {
-
-        this.color.copy( this.oldColor );
-        this.opacity = this.oldOpacity;
-
-      }
-
-    };
-
-  };
+  class GizmoMaterial {
+    constructor(parameters) {
+      THREE.MeshBasicMaterial.call(this);
+      this.depthTest = false;
+      this.depthWrite = false;
+      this.side = THREE.FrontSide;
+      this.transparent = true;
+      this.setValues(parameters);
+      this.oldColor = this.color.clone();
+      this.oldOpacity = this.opacity;
+      this.highlight = function (highlighted) {
+        if (highlighted) {
+          this.color.setRGB(1, 230 / 255, 3 / 255);
+          this.opacity = 1;
+        }
+        else {
+          this.color.copy(this.oldColor);
+          this.opacity = this.oldOpacity;
+        }
+      };
+    }
+  }
 
   GizmoMaterial.prototype = Object.create( THREE.MeshBasicMaterial.prototype );
 
-  var GizmoLineMaterial = function ( parameters ) {
-
-    THREE.LineBasicMaterial.call( this );
-
-    this.depthTest = false;
-    this.depthWrite = false;
-    this.transparent = true;
-    this.linewidth = 3;
-
-    this.setValues( parameters );
-
-    this.oldColor = this.color.clone();
-    this.oldOpacity = this.opacity;
-
-    this.highlight = function( highlighted ) {
-
-      if ( highlighted ) {
-
-        this.color.setRGB( 1, 230/255, 3/255 );
-        this.opacity = 1;
-
-      } else {
-
-        this.color.copy( this.oldColor );
-        this.opacity = this.oldOpacity;
-
-      }
-
-    };
-
-  };
+  class GizmoLineMaterial {
+    constructor(parameters) {
+      THREE.LineBasicMaterial.call(this);
+      this.depthTest = false;
+      this.depthWrite = false;
+      this.transparent = true;
+      this.linewidth = 3;
+      this.setValues(parameters);
+      this.oldColor = this.color.clone();
+      this.oldOpacity = this.opacity;
+      this.highlight = function (highlighted) {
+        if (highlighted) {
+          this.color.setRGB(1, 230 / 255, 3 / 255);
+          this.opacity = 1;
+        }
+        else {
+          this.color.copy(this.oldColor);
+          this.opacity = this.oldOpacity;
+        }
+      };
+    }
+  }
 
   GizmoLineMaterial.prototype = Object.create( THREE.LineBasicMaterial.prototype );
 

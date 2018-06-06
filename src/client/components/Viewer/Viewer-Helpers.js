@@ -256,29 +256,29 @@ function loadModel(viewables, lmvDoc, indexViewable) {
         viewer.loadModel(svfUrl, modelOptions, (model) => {
             
             switch (lmvDoc.myData.status.toString() === "success" ) {
-            case (lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dmlld2VyLXJvY2tzLXJlYWN0L3dhbGxfMV90b25uYWdlLmYzZA"):
+            case (lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6bW9kZWwyMDE4LTA2LTA2LTEzLTUzLTQ2LWQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0MjdlL09LTk9fMS5pcHQ"):
                 
                 panel = viewer.getExtension(ModelTransformerExtension).panel;
                 panel.setTransform(wallOneTransform());
                 panel.applyTransform(model);
-                modelName = "wall-ac-unit-one.f3d"    
+                modelName = "OKNO_1.ipt"    
                 break;
-            case (lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dmlld2VyLXJvY2tzLXJlYWN0L3dhbGwtdHlwZS12NC5mM2Q"):
+            case (lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6bW9kZWwyMDE4LTA2LTA2LTEzLTUzLTQ3LWQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0MjdlL09LTk9fMi5pcHQ"):
                 
                 panel = viewer.getExtension(ModelTransformerExtension).panel;
                 panel.setTransform(wallTwoTransform()); 
                 panel.applyTransform(model); 
-                modelName = "wall-ac-unit-two.f3d"
+                modelName = "OKNO_2.ipt"
                 break;
-            case (lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dmlld2VyLXJvY2tzLXJlYWN0L0Zsb29yLUV4cG9zZWQtMV9Ub25uYWdlLmYzZA"):
+            case (lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6bW9kZWwyMDE4LTA2LTA2LTEzLTU2LTMwLWQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0MjdlL0RWRVJFLmlwdA"):
                 panel = viewer.getExtension(ModelTransformerExtension).panel;
                 panel.setTransform(floorTransform());
                 panel.applyTransform(model);
-                modelName = "floor-ac-unit.f3d"
+                modelName = "DVERE.ipt"
                 break;
             default:
                 //viewer.impl.toggleCelShading(true);
-                modelName = "Apartment.rvt";
+                modelName = "Seat.dwf";
             }
 
             model.name = modelName;

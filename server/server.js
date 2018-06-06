@@ -30,7 +30,7 @@ const credentials = (
       )
 );
 
-app.set('port', (process.env.PORT || 3001));
+app.set('port', (process.env.PORT || 3000));
 app.use(express.static(buildDirectory))
 
 app.get('/', function (req, res) {
