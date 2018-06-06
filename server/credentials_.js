@@ -25,7 +25,7 @@ var credentials ={
 		client_secret: process.env.FORGE_CLIENT_SECRET || 'E4QmjoZixFZStT6J',
 		grant_type: 'client_credentials',
 		scope: 'viewables:read', // Setup the needed scopes for authorizing your Token
-		callbackUrl: process.env.CALLBACK_URL || 'https://cadsforge.herokuapp.com/api/forge/callback/oauth'
+		callbackUrl: process.env.CALLBACK_URL || 'https://cadsforge-react.herokuapp.com//api/forge/callback/oauth'
 	},
 	
 	// If you which to use the Autodesk View & Data API on the staging server, change this url
