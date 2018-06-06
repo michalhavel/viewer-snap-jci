@@ -36,4 +36,4 @@ var credentials ={
 credentials.Authentication =credentials.BaseUrl + '/authentication/' + credentials.Version + '/authenticate'
 
 
-module.exports = credentials;
+module.exports =  credentials;

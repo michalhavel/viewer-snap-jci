@@ -26,22 +26,22 @@ import './Gallery.css';
 
 const tilesData = [
   {
-    img: 'images/wall-ac-unit-one.png',
-    title: 'wall_1_tonnage',
+    img: 'images/OKNO_1.png',
+    title: 'Okno 1',
     key: '0001',
-    urn:'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dmlld2VyLXJvY2tzLXJlYWN0L3dhbGxfMV90b25uYWdlLmYzZA'
+    urn:'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6bW9kZWwyMDE4LTA2LTA2LTEzLTUzLTQ2LWQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0MjdlL09LTk9fMS5pcHQ'
   },
   {
-    img: 'images/wall-ac-unit-two.png',
-    title: 'Wall type',
+    img: 'images/OKNO_2.png',
+    title: 'Okno 2',
     key: '0002',
-    urn: 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dmlld2VyLXJvY2tzLXJlYWN0L3dhbGwtdHlwZS12NC5mM2Q'
+    urn: 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6bW9kZWwyMDE4LTA2LTA2LTEzLTUzLTQ3LWQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0MjdlL09LTk9fMi5pcHQ'
   },
   {
-    img: 'images/floor-ac-unit.png',
-    title: 'Floor-Exposed-1_Tonnage',
+    img: 'images/DVERE.png',
+    title: 'Dveře',
     key: '0003',
-    urn: 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6dmlld2VyLXJvY2tzLXJlYWN0L0Zsb29yLUV4cG9zZWQtMV9Ub25uYWdlLmYzZA'
+    urn: 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6bW9kZWwyMDE4LTA2LTA2LTEzLTU2LTMwLWQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0MjdlL0RWRVJFLmlwdA'
   }
 ];
 

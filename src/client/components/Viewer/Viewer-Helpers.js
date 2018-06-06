@@ -156,17 +156,17 @@ function wallOneTransform(){
         var transform = {
             translation: new THREE.Vector3(0.0, 0.0, 0.0),
             rotation: new THREE.Vector3(0.0, 0.0, 0.0),
-            scale: new THREE.Vector3(0.08, 0.08, 0.08)
+            scale: new THREE.Vector3(1, 1, 1)
         }
         switch (pointData.face.normal.x * pointData.face.normal.y === 0){
         case (pointData.face.normal.x === 0 && Math.round(pointData.face.normal.y) === 1):
             transform.translation = new THREE.Vector3(pointData.point.x , pointData.point.y+0.3, pointData.point.z);
-            transform.rotation = new THREE.Vector3(90, 180, 0);
+            transform.rotation = new THREE.Vector3(0, 0, 180);
             console.log('Inside Y = 1 Wall');
             break;
         case (pointData.face.normal.x === 0 && Math.round(pointData.face.normal.y) === -1) :
             transform.translation = new THREE.Vector3(pointData.point.x , pointData.point.y-0.3, pointData.point.z);
-            transform.rotation = new THREE.Vector3(90, 0, 0);
+            transform.rotation = new THREE.Vector3(0, 0, 0);
             console.log('Inside Y = -1 Wall');
             break;
         case (Math.round(pointData.face.normal.x) === 1 && pointData.face.normal.y === 0):
@@ -176,7 +176,7 @@ function wallOneTransform(){
             break;
         case (Math.round(pointData.face.normal.x) === -1 && pointData.face.normal.y === 0):
             transform.translation = new THREE.Vector3(pointData.point.x-0.35 , pointData.point.y, pointData.point.z);
-            transform.rotation = new THREE.Vector3(90, 270, 0);
+            transform.rotation = new THREE.Vector3(0, 180, 90);
             console.log('Inside X = -1 Wall');
             break;
         default:
@@ -192,17 +192,17 @@ function wallTwoTransform(){
         var transform = {
             translation: new THREE.Vector3(0.0, 0.0, 0.0),
             rotation: new THREE.Vector3(0.0, 0.0, 0.0),
-            scale: new THREE.Vector3(0.08, 0.08, 0.08)
+            scale: new THREE.Vector3(1, 1, 1)
         }
         switch (pointData.face.normal.x * pointData.face.normal.y === 0){
         case (pointData.face.normal.x === 0 && Math.round(pointData.face.normal.y) === 1):
             transform.translation = new THREE.Vector3(pointData.point.x , pointData.point.y+0.2, pointData.point.z);
-            transform.rotation = new THREE.Vector3(270, 0, 180);
+            transform.rotation = new THREE.Vector3(0, 0, 180);
             console.log('Inside Y = 1 Wall');
             break;
         case (pointData.face.normal.x === 0 && Math.round(pointData.face.normal.y) === -1) :
             transform.translation = new THREE.Vector3(pointData.point.x , pointData.point.y-0.2, pointData.point.z);
-            transform.rotation = new THREE.Vector3(90, 0, 0);
+            transform.rotation = new THREE.Vector3(0, 0, 0);
             console.log('Inside Y = -1 Wall');
             break;
         case (Math.round(pointData.face.normal.x) === 1 && pointData.face.normal.y === 0):
@@ -212,7 +212,7 @@ function wallTwoTransform(){
             break;
         case (Math.round(pointData.face.normal.x) === -1 && pointData.face.normal.y === 0):
             transform.translation = new THREE.Vector3(pointData.point.x - 0.2 , pointData.point.y, pointData.point.z);
-            transform.rotation = new THREE.Vector3(90, 270, 0);
+            transform.rotation = new THREE.Vector3(0, 180, 90);
             console.log('Inside X = -1 Wall');
             break;
         default:
@@ -226,8 +226,8 @@ function wallTwoTransform(){
 function floorTransform(){
     var transform = {
         translation: new THREE.Vector3(0.0, 0.0, 0.0),
-        rotation: new THREE.Vector3(90.0, 0.0, 0.0),
-        scale: new THREE.Vector3(0.08, 0.08, 0.08)
+        rotation: new THREE.Vector3(0.0, 0.0, 0.0),
+        scale: new THREE.Vector3(1, 1, 1)
     }
         console.log(transform);
         if (pointData.face.normal.x === 0 && pointData.face.normal.y === 0 ){
@@ -263,6 +263,7 @@ function loadModel(viewables, lmvDoc, indexViewable) {
                 panel.applyTransform(model);
                 modelName = "OKNO_1.ipt"    
                 break;
+
             case (lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6bW9kZWwyMDE4LTA2LTA2LTEzLTUzLTQ3LWQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0MjdlL09LTk9fMi5pcHQ"):
                 
                 panel = viewer.getExtension(ModelTransformerExtension).panel;
@@ -270,6 +271,7 @@ function loadModel(viewables, lmvDoc, indexViewable) {
                 panel.applyTransform(model); 
                 modelName = "OKNO_2.ipt"
                 break;
+                
             case (lmvDoc.myData.guid.toString() === "dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6bW9kZWwyMDE4LTA2LTA2LTEzLTU2LTMwLWQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0MjdlL0RWRVJFLmlwdA"):
                 panel = viewer.getExtension(ModelTransformerExtension).panel;
                 panel.setTransform(floorTransform());
@@ -278,7 +280,7 @@ function loadModel(viewables, lmvDoc, indexViewable) {
                 break;
             default:
                 //viewer.impl.toggleCelShading(true);
-                modelName = "Seat.dwf";
+                modelName = "KONTEJNER.ipt";
             }
 
             model.name = modelName;
