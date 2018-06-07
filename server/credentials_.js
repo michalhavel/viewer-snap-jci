@@ -31,7 +31,7 @@ var credentials ={
 	
 	// If you which to use the Autodesk View & Data API on the staging server, change this url
 	BaseUrl: 'https://developer.api.autodesk.com',
-	Version: 'v2'
+	Version: 'v1'
 } ;
 
 credentials.Authentication =credentials.BaseUrl + '/authentication/' + credentials.Version + '/authenticate'
